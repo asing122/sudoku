@@ -6,8 +6,9 @@
 }
 
 .board {
-  width: 30rem;
-  height: 30rem;
+  width: 100%;
+  max-width: 30rem;
+  height: auto;
   margin: auto;
   display: flex;
   flex-direction: row;
@@ -19,10 +20,11 @@
 .grid-box {
   border: 1px solid white;
   border-radius: 1rem;
-  width: 10rem;
-  height: 10rem;
+  width: calc(100% / 3);
+  height: auto;
+  aspect-ratio: 1 / 1;
   box-sizing: border-box;
-  margin-right: -2px;
+  margin-right: -4px;
   margin-bottom: -2px;
   display: flex;
   flex-direction: row;
@@ -33,8 +35,8 @@
 .cell-item {
   border: 1px solid white;
   border-radius: 1rem;
-  width: 3.333333333rem;
-  height: 3.333333333rem;
+  width: calc(100% / 3);
+  height: auto;
   box-sizing: border-box;
   margin-right: -1px;
   color: white;
@@ -43,11 +45,6 @@
   justify-content: center;
   align-items: center;
   background-color: none;
-}
-
-.cell-item:hover {
-  background-color: #345830;
-  transition-duration: 0.5s;
 }
 
 .input-cell {
@@ -66,10 +63,51 @@
   border-radius: 2rem;
   position: fixed;
   top: 90%;
-  left: 46%;
+  left: 50%;
+  transform: translateX(-50%);
 }
 
 input {
   outline: none;
   outline-color: transparent;
+}
+
+@media (max-width: 768px) {
+  .board {
+    max-width: 20rem;
+  }
+
+  .grid-box {
+    width: calc(100% / 3);
+  }
+
+  .cell-item {
+    width: calc(100% / 3);
+    font-size: 0.7rem;
+  }
+
+  .show-answers {
+    padding: 0.4rem;
+    top: 85%;
+  }
+}
+
+@media (max-width: 480px) {
+  .board {
+    max-width: 15rem;
+  }
+
+  .grid-box {
+    width: calc(100% / 3);
+  }
+
+  .cell-item {
+    width: calc(100% / 3);
+    font-size: 0.6rem;
+  }
+
+  .show-answers {
+    padding: 0.3rem;
+    top: 80%;
+  }
 }
