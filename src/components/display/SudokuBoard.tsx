@@ -1,7 +1,8 @@
 import { useState } from "react";
 import "../../styles/board.css";
 import Answers from "./Answers";
-import Board from "./Board";
+import Board from "./BoardDisplay";
+import BoardDisplay from "./BoardDisplay";
 
 export type Board = {
   num: number;
@@ -12,7 +13,7 @@ export type Board = {
 
 export type BoardProps = {
   originalBoard: number[][];
-  initialBoard: number[][];
+  initialBoard: Board[][];
 };
 
 export const colors = [
@@ -39,7 +40,7 @@ export default function SudokuBoard({
         <Answers board={originalBoard} />
       ) : (
         <div className="display-items">
-          <Board initial={initialBoard} />
+          <BoardDisplay initial={initialBoard} />
           <button className="show-answers" onClick={() => setShowAnswers(true)}>
             Show answers
           </button>

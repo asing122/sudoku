@@ -40,25 +40,25 @@ export class Sudoku {
 
   checkIfSafe(i: number, j: number, num: number) {
     return (
-      this.rowConflict(i, num) &&
-      this.colConflict(j, num) &&
-      this.boxConflict(Math.floor(i / 3) * 3 + Math.floor(j / 3), num)
+      this.noRowConflict(i, num) &&
+      this.noColConflict(j, num) &&
+      this.noBoxConflict(Math.floor(i / 3) * 3 + Math.floor(j / 3), num)
     );
   }
 
-  rowConflict(i: number, num: number) {
+  noRowConflict(i: number, num: number) {
     return (
       this.mat.filter((item) => item.row == i && item.num == num).length == 0
     );
   }
 
-  colConflict(j: number, num: number) {
+  noColConflict(j: number, num: number) {
     return (
       this.mat.filter((item) => item.col == j && item.num == num).length == 0
     );
   }
 
-  boxConflict(box: number, num: number) {
+  noBoxConflict(box: number, num: number) {
     return (
       this.mat.filter((item) => item.box == box && item.num == num).length == 0
     );

@@ -72,6 +72,19 @@ input {
   outline-color: transparent;
 }
 
+.popup {
+  z-index: 2;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: white;
+  padding: 1rem;
+  border-radius: 2rem;
+  font-size: 0.8rem;
+  box-shadow: 5px 5px 200px black;
+}
+
 @media (max-width: 768px) {
   .board {
     max-width: 20rem;
