@@ -1,0 +1,75 @@
+.body {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.board {
+  width: 30rem;
+  height: 30rem;
+  margin: auto;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  box-sizing: border-box;
+  border-radius: 1rem;
+}
+
+.grid-box {
+  border: 1px solid white;
+  border-radius: 1rem;
+  width: 10rem;
+  height: 10rem;
+  box-sizing: border-box;
+  margin-right: -2px;
+  margin-bottom: -2px;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  box-sizing: border-box;
+}
+
+.cell-item {
+  border: 1px solid white;
+  border-radius: 1rem;
+  width: 3.333333333rem;
+  height: 3.333333333rem;
+  box-sizing: border-box;
+  margin-right: -1px;
+  color: white;
+  font-size: 0.8rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: none;
+}
+
+.cell-item:hover {
+  background-color: #345830;
+  transition-duration: 0.5s;
+}
+
+.input-cell {
+  width: 100%;
+  height: 100%;
+  background-color: transparent;
+  border: none;
+  text-align: center;
+  color: white;
+  font-weight: bold;
+}
+
+.show-answers {
+  border: none;
+  padding: 0.5rem;
+  border-radius: 2rem;
+  position: fixed;
+  top: 83%;
+  left: 46%;
+}
+
+input {
+  outline: none;
+  outline-color: transparent;
+}
