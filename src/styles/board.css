@@ -84,6 +84,7 @@ input {
   .cell-item {
     width: calc(100% / 3);
     font-size: 0.7rem;
+    border-radius: 0.5rem;
   }
 
   .show-answers {
